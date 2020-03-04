@@ -1,0 +1,15 @@
+.education {
+    padding-top: 50px;
+    height: 650px;
+    background: #f6f6f6;
+    &__img {
+        img{
+            margin: 20px;
+            display: inline-block;
+            width: 350px;
+            img:hover{
+                width: 120%;
+            }
+        }
+    }   
+}

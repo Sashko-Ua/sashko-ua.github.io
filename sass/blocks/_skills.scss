@@ -1,0 +1,29 @@
+.skills {
+    padding-top: 50px;
+    min-height: 500px;
+    background-color: #fff;
+
+    &__box {
+        padding: 50px;
+    }
+    &__bar {
+        width: 750px;
+        height: 10px;
+        background-color: #f6f6f6;
+        position: relative;
+        margin-bottom: 60px;
+        padding: 2px;
+        box-sizing: border-box;
+    }
+    &__progress {
+        padding: 2px 0;
+        height: 6px;
+        background-color: #000000;
+    }
+    
+    .head-sm {
+        position: absolute;
+        top: -35px;
+        left: 15px;
+    }
+}
