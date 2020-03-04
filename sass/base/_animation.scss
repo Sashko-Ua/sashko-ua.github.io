@@ -1,5 +1,49 @@
 @keyframes scroll {
-    0%   { top:2px;  opacity: 0;}
-    30%  { top:8px; opacity: 1;}
-    100% { top:16px; opacity: 0;}
-  }
+	0%   { top:2px;  opacity: 0;}
+	30%  { top:8px; opacity: 1;}
+	100% { top:16px; opacity: 0;}
+}
+
+
+// !__________Skills__________!
+
+@keyframes html {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 79%;
+	}
+}
+@keyframes css {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 73%;
+	}
+}
+@keyframes javascript {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 25%;
+	}
+}
+@keyframes photoshop {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 93%;
+	}
+}
+@keyframes python {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 35%;
+	}
+}

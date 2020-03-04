@@ -1,15 +1,28 @@
 .education {
+    min-height: 670px;
     padding-top: 50px;
-    height: 650px;
     background: #f6f6f6;
-    &__img {
-        img{
-            margin: 20px;
-            display: inline-block;
-            width: 350px;
-            img:hover{
-                width: 120%;
+    &__wrapper {
+        ul {
+            list-style-type: none;
+            li {
+                float: left;
+                width: 385px;
+                height: 270px;
             }
         }
+        .cover {
+            img{
+                filter: blur(.5px)  grayscale(100%);
+                margin: 20px;
+                display: inline-block;
+                width: 100%;
+            }
+            img:hover {
+                filter: blur(0px) grayscale(0%);
+                width: 370px;
+            }
+        }        
     }   
 }
+
