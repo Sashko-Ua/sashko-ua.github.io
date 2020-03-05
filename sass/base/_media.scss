@@ -1,0 +1,133 @@
+@media (max-width: 1199px) {
+    // __________MENU__________
+    .menu {
+        height: 40px;
+        font-size: 25px;
+    }
+
+    // __________ABOUT__________
+    .about {
+        min-height: 600px;
+        &__bg{
+            min-height: 600px;
+        }
+    }
+
+    // __________SKILS__________
+    .skills {
+        &__bar {
+            width: 700px;
+        }
+    }
+
+    // __________FOOTER__________
+    .footer {
+        &__social {
+            a {
+                padding: 11px 165px;
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+    // __________MENU__________
+    .menu {
+        height: 35px;
+        font-size: 20px;
+    }
+
+    // __________MAIN__________
+    .main {
+        &__box {
+            width: 280px;
+            height: 280px;
+        }
+        &__content {
+            h1 {
+                font-size: 37px;
+            }
+            width: 240px;
+            height: 240px;
+        }
+
+    }
+
+    // __________EDUCATION__________
+    .education {
+        min-height: 500px;
+        padding-top: 40px;
+        &__wrapper {
+            ul {
+                li {
+                    height: 175px;
+                }
+            }
+            .cover {
+                width: 255px;
+            }
+        }
+    }
+
+    // __________SKILS__________
+    .skills {
+        &__bar {
+            width: 550px;
+        }
+    }
+
+    // __________CONTACT__________
+    .form {
+        padding-top: 45px;
+        min-height: 450px;
+        form {
+            input {
+                height: 40px;
+            }
+            button {
+                height: 40px;
+                font-size: 25px;
+            }
+        }
+    }
+
+    // __________FOOTER__________
+    .footer {
+        &__social {
+            a {
+                padding: 11px 130px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    // __________MAIN__________
+    .main {
+        &__mouse {
+            display: none;
+        }
+    }
+
+    // __________ABOUT__________
+    .about {
+        min-height: 1100px;
+        .row {
+            height: 500px;
+            .owl-carousel {
+                .why {
+                    padding: 110px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    // __________FOOTER__________
+    .footer {
+        &__social {
+            a {
+                padding: 11px 95px;
+            }
+        }
+    }
+}
