@@ -1,21 +1,22 @@
 .about {
     font-family: 'Caveat', cursive;
+    font-size: 25px;
     min-height: 700px;
     .row {
         width: 100%;
+        .col-md-6 {
+            padding: 0;
+        }
         .owl-carousel {
             display: block;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             .why {
-                padding: 0 150px;
+                padding: 0 130px;
             }
             .table {
                 margin: 0 auto;
-                td {
-                    font-size: 14px;
-                }
                 .contact {
                     padding: 15px 0;
                     font-size: 18px;

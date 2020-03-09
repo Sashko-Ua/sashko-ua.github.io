@@ -24,19 +24,11 @@
         }
     }
 
-    // __________SKILS__________
-    .skills {
-        &__bar {
-            width: 700px;
-        }
-    }
-
-
     // __________FOOTER__________
     .footer {
         &__social {
             a {
-                padding: 11px 165px;
+                padding: 11px 130px;
             }
         }
     }
@@ -62,7 +54,13 @@
             width: 240px;
             height: 240px;
         }
+    }
 
+    // __________ABOUT__________
+    .about {
+        .why {
+            padding: 0 100px;
+        }
     }
 
     // __________EDUCATION__________
@@ -78,9 +76,7 @@
 
     // __________SKILS__________
     .skills {
-        &__bar {
-            width: 550px;
-        }
+        min-height: 430px;
     }
 
     // __________CONTACT__________
@@ -109,6 +105,9 @@
 }
 
 @media (max-width: 767px) {
+    h2 {
+        margin-bottom: 10px;
+    }
     // __________MAIN__________
     .main {
         &__mouse {
@@ -122,28 +121,15 @@
         .row {
             margin: 0;
             height: 500px;
-            .col-md-6 {
-                padding: 0;
-            }
             .owl-carousel {
+                .owl-dots {
+                    margin-top: 10px;
+                }
                 .why {
                     padding: 110px;
                     text-align: center;
                 }
             }
-        }
-    }
-
-    // __________EDUCATION__________
-
-
-    // __________SKILS__________
-    .skills {
-        &__box {
-            padding: 0;
-        }
-        &__bar {
-            width: 510px;
         }
     }
 
@@ -163,28 +149,48 @@
     .footer {
         &__social {
             a {
-                padding: 11px 95px;
+                padding: 11px 68px;
             }
         }
     }
 }
 
 @media (max-width: 575px) {
-    // __________SKILS__________
-    .skills {
-        &__box {
-            padding: 0;
+    // __________ABOUT__________
+    .about {
+        .row {
+            .owl-carousel {
+                .why {
+                    padding: 30px 25px;
+                }
+                .table {
+                    padding: 30px 25px;
+                }
+            }
         }
-        &__bar {
-            width: 545px;
+    }
+
+    // __________EDUCATION__________
+    .education {
+        min-height: 500px;
+        padding-top: 40px;
+        &__wrapper {
+            img {
+                width: 185px;
+            }
         }
+    }
+
+    // __________FOORM__________
+    .form {
+        min-height: 560px;
     }
 
     // __________FOOTER__________
     .footer {
         &__social {
             a {
-                padding: 11px 68px;
+                padding: 11px 20px;
             }
         }
     }
