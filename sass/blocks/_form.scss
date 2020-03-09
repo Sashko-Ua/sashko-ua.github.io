@@ -1,4 +1,5 @@
 .form {
+    font-family: 'Kanit';
     padding-top: 50px;
     min-height: 500px;
     background-color:#F6F6F6;
@@ -19,6 +20,9 @@
             border: 1px solid #000;
             font-size: 30px;
             text-transform: uppercase;
+        }
+        button:hover {
+            background-color: #FFFF94;
         }
     }
 }

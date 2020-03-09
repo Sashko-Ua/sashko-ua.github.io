@@ -13,12 +13,24 @@
         }
     }
 
+    // __________EDUCATION__________
+    .education {
+        min-height: 500px;
+        padding-top: 40px;
+        &__wrapper {
+            img {
+                width: 300px;
+            }
+        }
+    }
+
     // __________SKILS__________
     .skills {
         &__bar {
             width: 700px;
         }
     }
+
 
     // __________FOOTER__________
     .footer {
@@ -58,13 +70,8 @@
         min-height: 500px;
         padding-top: 40px;
         &__wrapper {
-            ul {
-                li {
-                    height: 175px;
-                }
-            }
-            .cover {
-                width: 255px;
+            img {
+                width: 240px;
             }
         }
     }
@@ -113,7 +120,11 @@
     .about {
         min-height: 1100px;
         .row {
+            margin: 0;
             height: 500px;
+            .col-md-6 {
+                padding: 0;
+            }
             .owl-carousel {
                 .why {
                     padding: 110px;
@@ -122,11 +133,58 @@
             }
         }
     }
+
+    // __________EDUCATION__________
+
+
+    // __________SKILS__________
+    .skills {
+        &__box {
+            padding: 0;
+        }
+        &__bar {
+            width: 510px;
+        }
+    }
+
+    // __________FOORM__________
+    .form {
+        min-height: 550px;
+        .col-md-9 {
+            padding-top: 30px;
+        }
+        form {
+            input {
+                margin-bottom: 35px;
+            }
+        }
+    }
     // __________FOOTER__________
     .footer {
         &__social {
             a {
                 padding: 11px 95px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    // __________SKILS__________
+    .skills {
+        &__box {
+            padding: 0;
+        }
+        &__bar {
+            width: 545px;
+        }
+    }
+
+    // __________FOOTER__________
+    .footer {
+        &__social {
+            a {
+                padding: 11px 68px;
             }
         }
     }
