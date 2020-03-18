@@ -1,20 +1,50 @@
 .education {
     font-family: 'Kanit';
-    min-height: 670px;
+    min-height: 600px;
     padding-top: 50px;
     background: #f6f6f6;
+    &__box {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        
+    }
+    &__item {
+        margin: 0 20px 20px 0;
+        display: flex;
+        justify-content: space-between;
+        width: 350px;
+        overflow: hidden;
+    }
     &__wrapper {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        img{
-            filter: blur(.5px)  grayscale(100%);
-            margin-bottom: 30px;
+        width: 200%;
+    }
+    &__click {
+        display: flex;
+        justify-content: flex-end;
+        width: 350px;
+        transform: translateX(-100%) rotatey(360deg);
+        transition: .7s all;
+        &_active {
+            transform: translateX(0%);
+            img {
+                opacity: .9;
+                width: 100%;
+                margin:  0 ;
+            }
+        }
+    }
+    &__certificate {
+        width: 50%;
+        transform: translateX(0%);
+        transition: .7s all;
+        img {
             width: 350px;
         }
-        img:hover {
-            filter: blur(0px) grayscale(0%);
+        &_active {
+            transform: translateX(-100%) rotatey(360deg);
         }
-    }  
+    }
 }   
     

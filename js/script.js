@@ -17,13 +17,34 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 })
 
-// ---------- OWL-CAROUSEL ----------
+
 
 $(document).ready(function(){
+    // ---------- OWL-CAROUSEL ----------
 	$(".owl-carousel").owlCarousel({
 	items: 1,
 	loop: true,
 	dotsEach: true,
 	smartSpeed: 1000,
-	});
+    });
+    
+
+    // ---------- TABS ----------
+    function toggleSlide(item) {
+		$(item).each(function(i) {
+			$(this).on('click', function(e) {
+				e.preventDefault();
+				$('.education__click').eq(i).toggleClass('education__click_active');
+				$('.education__certificate').eq(i).toggleClass('education__certificate_active');
+			})
+		});
+	};
+
+	toggleSlide('.next')
+    toggleSlide('.back')
  });
+
+ 
+
+
+ 

@@ -1,8 +1,25 @@
+@media (min-width: 1200px) {
+    // __________MAIN__________
+    .main {
+        &__arrow {
+            display: none;
+        }
+    }
+}
+
 @media (max-width: 1199px) {
     // __________MENU__________
     .menu {
         height: 40px;
         font-size: 25px;
+        width: 30%;
+    }
+
+    // __________MAIN__________
+    .main {
+        &__arrow {
+            display: none;
+        }
     }
 
     // __________ABOUT__________
@@ -11,13 +28,27 @@
         &__bg{
             min-height: 600px;
         }
+        .row {
+            .owl-carousel {
+                .why {
+                    font-size: 23px;
+                    padding: 0 70px;
+                }
+                .table {
+                    margin: 50px auto 0;
+                }
+            }
+        }
     }
 
     // __________EDUCATION__________
     .education {
         min-height: 500px;
         padding-top: 40px;
-        &__wrapper {
+        &__item {
+            width: 300px;
+        }
+        &__certificate {
             img {
                 width: 300px;
             }
@@ -38,7 +69,8 @@
     // __________MENU__________
     .menu {
         height: 35px;
-        font-size: 20px;
+        font-size: 30px;
+        width: 40%;
     }
 
     // __________MAIN__________
@@ -58,18 +90,37 @@
 
     // __________ABOUT__________
     .about {
-        .why {
-            padding: 0 100px;
-        }
+        .row {
+            .owl-carousel {
+                .why {
+                    font-size: 21px;
+                    padding: 0 65px;
+                }
+                .table {
+                    margin: 50px auto 0;
+                }
+                .owl-dots {
+                    margin-top: 25px;
+                }
+            }
+        }        
     }
 
     // __________EDUCATION__________
     .education {
         min-height: 500px;
         padding-top: 40px;
-        &__wrapper {
+        &__item {
+            width: 220px;
+        }
+        &__click {
             img {
-                width: 240px;
+                width: 160px;
+            }
+        }
+        &__certificate {
+            img {
+                width: 220px;
             }
         }
     }
@@ -98,7 +149,7 @@
     .footer {
         &__social {
             a {
-                padding: 11px 130px;
+                padding: 11px 100px;
             }
         }
     }
@@ -108,10 +159,26 @@
     h2 {
         margin-bottom: 10px;
     }
+    // __________MENU__________
+    .nav {
+        .menu {
+            width: 50%;
+            &__item {
+                padding-bottom: 30px;
+            }
+        }
+    }
+
     // __________MAIN__________
     .main {
         &__mouse {
             display: none;
+        }
+        &__arrow {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display:block;
         }
     }
 
@@ -120,19 +187,41 @@
         min-height: 1100px;
         .row {
             margin: 0;
-            height: 500px;
+            min-height: 500px;
             .owl-carousel {
-                .owl-dots {
-                    margin-top: 10px;
-                }
                 .why {
-                    padding: 110px;
                     text-align: center;
+                }
+                .table {
+                    margin: 0 auto;
+                }
+                .owl-dots {
+                    margin-top: 30px;
                 }
             }
         }
     }
 
+    // __________EDUCATION__________
+    .education {
+        &__box {
+            padding-top: 25px;
+        }
+        &__item {
+            width: 230px;
+        }
+        &__click {
+            justify-content: space-evenly;
+            img {
+                width: 150px;
+            }
+        }
+        &__certificate {
+            img {
+                width: 230px;
+            }
+        }
+    }
     // __________FOORM__________
     .form {
         min-height: 550px;
@@ -156,15 +245,27 @@
 }
 
 @media (max-width: 575px) {
+    // __________MENU__________
+    .nav {
+        .menu {
+            width: 75%;
+        }
+    }
+
     // __________ABOUT__________
     .about {
         .row {
+            min-height: 550px;
             .owl-carousel {
                 .why {
-                    padding: 30px 25px;
+                    font-size: 20px;
+                    padding: 0 25px;
                 }
                 .table {
-                    padding: 30px 25px;
+                    margin: 55px auto;
+                }
+                .owl-dots {
+                    margin-top: 10px;
                 }
             }
         }
@@ -172,11 +273,21 @@
 
     // __________EDUCATION__________
     .education {
-        min-height: 500px;
-        padding-top: 40px;
-        &__wrapper {
+        &__box {
+            justify-content: space-evenly;
+        }
+        &__item {
+            width: 250px;
+        }
+        &__click {
+            justify-content: space-evenly;
             img {
-                width: 185px;
+                width: 175px;
+            }
+        }
+        &__certificate {
+            img {
+                width: 250px;
             }
         }
     }

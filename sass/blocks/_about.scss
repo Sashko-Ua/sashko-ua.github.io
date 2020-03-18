@@ -24,6 +24,12 @@
                 .break {
                     padding: 0 15px;
                 }
+                a {
+                    color: #000;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
             .owl-item .active {
                 display: none;
