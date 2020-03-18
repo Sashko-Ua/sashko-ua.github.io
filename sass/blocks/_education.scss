@@ -17,17 +17,18 @@
         overflow: hidden;
     }
     &__wrapper {
+        height: 265px;
         display: flex;
-        width: 200%;
+        width: 100%;
     }
     &__click {
-        display: flex;
-        justify-content: flex-end;
+        display: none;
         width: 350px;
-        transform: translateX(-100%) rotatey(360deg);
         transition: .7s all;
+        padding-top: 20px;
         &_active {
-            transform: translateX(0%);
+            display: flex;
+            justify-content: center;
             img {
                 opacity: .9;
                 width: 100%;
@@ -36,14 +37,15 @@
         }
     }
     &__certificate {
+        display: none;
         width: 50%;
-        transform: translateX(0%);
         transition: .7s all;
         img {
             width: 350px;
         }
         &_active {
-            transform: translateX(-100%) rotatey(360deg);
+            display: flex;
+            animation: flipInY 1.5s;
         }
     }
 }   
