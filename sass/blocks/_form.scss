@@ -27,10 +27,10 @@
             border: 1px solid #000;
             font-size: 30px;
             text-transform: uppercase;
-        }
-        button:hover {
-            background-color: #8CCDD1;
-            color: #fff;
+            &:hover {
+                background-color: #8CCDD1;
+                color: #fff;
+            }
         }
         .error {
             margin: 0 0 20px;

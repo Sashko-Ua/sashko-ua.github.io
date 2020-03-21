@@ -85,4 +85,14 @@ $(document).ready(function(){
     validateForms('#form');
 
     $('input[name=phone]').mask("+38 (099) 99-99-999");
+
+
+    // __________Fancybox__________
+    $('[data-fancybox="gallery"]').fancybox({
+        loop: true,
+        toolbar: false,
+        animationEffect: "zoom-in-out",
+        transitionEffect: "tube",
+        transitionDuration: 600,
+    });
 });
