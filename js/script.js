@@ -1,4 +1,4 @@
-// ---------- HAMBURGER ----------
+// __________HAMBURGER__________
 window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu'),
     menuItem = document.querySelectorAll('.menu__item'),
@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 $(document).ready(function(){
-    // ---------- OWL-CAROUSEL ----------
+    // __________OWL-CAROUSEL__________
 	$(".owl-carousel").owlCarousel({
 	items: 1,
 	loop: true,
@@ -29,7 +29,7 @@ $(document).ready(function(){
     });
     
 
-    // ---------- TABS ----------
+    // __________TABS__________
     function toggleSlide(item) {
 		$(item).each(function(i) {
 			$(this).on('click', function(e) {
@@ -43,6 +43,8 @@ $(document).ready(function(){
 	toggleSlide('.next')
     toggleSlide('.back')
 
+
+    // __________Scroll__________
     $('a[href^="#"]').bind("click", function(e){
         var anchor = $(this);
         $('html, body').stop().animate({
@@ -50,4 +52,37 @@ $(document).ready(function(){
         }, 1000);
         e.preventDefault();
     });
+
+
+    // __________Validation__________
+    function validateForms(form){
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 3
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "You forgot to enter your name!",
+                    minlength: jQuery.validator.format("Is it realy your name?")
+                  },
+                phone: "You forgot to enter your phone number!",
+                email: {
+                  required: "You forgot to enter your email!",
+                  email: "Sorry, this is not a real email..."
+                }
+            }
+        });
+    };
+
+    validateForms('#form');
+
+    $('input[name=phone]').mask("+38 (099) 99-99-999");
 });

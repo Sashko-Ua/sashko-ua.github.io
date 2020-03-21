@@ -5,15 +5,21 @@
     min-height: 500px;
     background-color:#F6F6F6;
     form {
-        margin: 0 20px;
         display: flex;
         flex-direction: column;
         input {
             height: 50px;
-            margin-bottom: 50px;
+            margin-bottom: 45px;
             border: none;
             border-bottom: 1px solid #000;
             padding: 0 20px;
+            &:first-child {
+                margin-top: 0;
+            }
+            &_active {
+                border: 2px solid #7AB4B8;
+            }
+
         }
         button {
             height: 50px;
@@ -23,8 +29,18 @@
             text-transform: uppercase;
         }
         button:hover {
-            background-color: #000;
+            background-color: #8CCDD1;
             color: #fff;
+        }
+        .error {
+            margin: 0 0 20px;
+            padding: 0 20px;
+            color: red;
+            border: 1px solid red;
+            font-size: 18px;
+            &:nth-child(even) {
+                border: none;
+            }
         }
     }
 }

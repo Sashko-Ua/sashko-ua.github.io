@@ -4,7 +4,6 @@
         width: 100%;
         height: 100vh;
         background: url(../img/main_bg.jpg) center (center/cover) no-repeat;
-        filter: brightness(150%) saturate(130%);
         z-index: 2;
     }
     &__box {
@@ -34,7 +33,7 @@
     &__mouse {
         position: absolute;
         border: 2px solid #2f2f2f;
-        background: rgba(255,255,255, .8);
+        background: #fff;
         border-radius: 20px;
         height: 60px;
         width: 40px;
