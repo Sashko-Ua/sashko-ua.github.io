@@ -20,40 +20,6 @@
     }
 }
 
-// __________EDUCATION__________
-@keyframes flipInY {
-	from {
-	  -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-	  transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-	  -webkit-animation-timing-function: ease-in;
-	  animation-timing-function: ease-in;
-	  opacity: 0;
-	}
-  
-	40% {
-	  -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-	  transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-	  -webkit-animation-timing-function: ease-in;
-	  animation-timing-function: ease-in;
-	}
-  
-	60% {
-	  -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-	  transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-	  opacity: 1;
-	}
-  
-	80% {
-	  -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-	  transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-	}
-  
-	to {
-	  -webkit-transform: perspective(400px);
-	  transform: perspective(400px);
-	}
-}
-
 // __________SKILS__________
 @keyframes html {
 	from {
@@ -96,8 +62,8 @@
 	}
 }
 
-// __________ARROW-BOTT__________
-@keyframes arrow-bottom {
+// __________ARROW-UP__________
+@keyframes arrowUp {
     0%{
         opacity: 0;
         transform: rotate(45deg) translate(10px,10px);
@@ -110,4 +76,3 @@
         transform: rotate(45deg) translate(-10px,-10px);
     }
 }
-

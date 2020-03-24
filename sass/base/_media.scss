@@ -1,15 +1,3 @@
-@media (max-width: 1700px) {
-    .about {
-        font-size: 28px;
-    }
-}
-
-@media (max-width: 1500px) {
-    .about {
-        font-size: 23px;
-    }
-}
-
 @media (min-width: 1200px) {
     // __________MAIN__________
     .main {
@@ -57,14 +45,6 @@
     .education {
         min-height: 500px;
         padding-top: 40px;
-        &__item {
-            width: 300px;
-        }
-        &__certificate {
-            img {
-                width: 300px;
-            }
-        }
     }
 
     // __________FOOTER__________
@@ -75,6 +55,12 @@
             }
         }
     }
+
+    // __________ARROW-UP__________
+    .arrow {
+        bottom: 15%;
+    }
+
 }
 
 @media (max-width:991px) {
@@ -122,19 +108,6 @@
     .education {
         min-height: 500px;
         padding-top: 40px;
-        &__item {
-            width: 220px;
-        }
-        &__click {
-            img {
-                width: 160px;
-            }
-        }
-        &__certificate {
-            img {
-                width: 220px;
-            }
-        }
     }
 
     // __________SKILS__________
@@ -145,7 +118,7 @@
     // __________CONTACT__________
     .form {
         padding-top: 45px;
-        min-height: 450px;
+        min-height: 400px;
         form {
             input {
                 height: 40px;
@@ -205,6 +178,7 @@
                     text-align: center;
                 }
                 .table {
+                    font-size: 25px;
                     margin: 0 auto;
                 }
                 .owl-dots {
@@ -218,29 +192,20 @@
     .education {
         &__box {
             padding-top: 25px;
-        }
-        &__item {
-            width: 230px;
-        }
-        &__click {
-            justify-content: space-evenly;
-            img {
-                width: 150px;
-            }
-        }
-        &__certificate {
-            img {
-                width: 230px;
+            a {
+                width: 200px;
+                img {
+                    width: 100%;
+                }
             }
         }
     }
+
     // __________FOORM__________
     .form {
-        min-height: 550px;
-        .col-md-9 {
-            padding-top: 30px;
-        }
+        min-height: 500px;
         form {
+            margin-top: 30px;
             input {
                 margin-bottom: 35px;
             }
@@ -254,6 +219,12 @@
             }
         }
     }
+
+    // __________ARROW-UP__________
+    .arrow {
+        right: -1000%;
+    }
+        
 }
 
 @media (max-width: 575px) {
@@ -271,7 +242,7 @@
             .owl-carousel {
                 .why {
                     font-size: 20px;
-                    padding: 0 25px;
+                    padding: 65px 25px;
                 }
                 .table {
                     margin: 55px auto;
@@ -285,28 +256,36 @@
 
     // __________EDUCATION__________
     .education {
+        .col-md-3 {
+            padding: 0 40px;
+            .title:after {
+                left: 40px;
+            }
+        }
         &__box {
             justify-content: space-evenly;
         }
-        &__item {
-            width: 250px;
-        }
-        &__click {
-            justify-content: space-evenly;
-            img {
-                width: 175px;
-            }
-        }
-        &__certificate {
-            img {
-                width: 250px;
-            }
+    }
+
+    // __________SKILS__________
+    .skills {
+        padding: 35px 40px;
+        &__box {
+            height: 400px;
         }
     }
 
     // __________FOORM__________
     .form {
-        min-height: 560px;
+        min-height: 465px;
+        form {
+            .error {
+                font-size: 12px;
+            }
+            button {
+                font-size: 20px;
+            }
+        }
     }
 
     // __________FOOTER__________
@@ -314,6 +293,50 @@
         &__social {
             a {
                 padding: 11px 20px;
+            }
+        }
+    }
+    // __________ARROW-UP__________
+    .arrow {
+        right: -1000px;
+    }
+}
+
+@media (max-width: 350px) {
+    .about {
+        .row {
+            min-height: 550px;
+            .owl-carousel {
+                .why {
+                    padding: 10px 25px 0;
+                }
+            }
+        }
+    }
+
+    
+    // __________EDUCATION__________
+    .education {
+        &__box {
+            a {
+                width: 150px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+// __________FOORM__________
+    .form {
+        padding: 20px 40px;
+        min-height: 405px;
+        form {
+            .error {
+                margin: 0 5px;
+            }
+            input {
+                margin-bottom: 25px;
             }
         }
     }

@@ -1,9 +1,12 @@
 .form {
     position: relative;
     font-family: 'Kanit';
-    padding-top: 50px;
-    min-height: 500px;
+    padding: 50px;
+    min-height: 400px;
     background-color:#F6F6F6;
+    span {
+        font-size: 20px;
+    }
     form {
         display: flex;
         flex-direction: column;

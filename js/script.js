@@ -45,8 +45,16 @@ $(document).ready(function(){
 
 
     // __________Scroll__________
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+            $('.arrow').fadeIn();
+        } else {
+            $('.arrow').fadeOut();
+        }
+    });
+
     $('a[href^="#"]').bind("click", function(e){
-        var anchor = $(this);
+        const anchor = $(this);
         $('html, body').stop().animate({
          scrollTop: $(anchor.attr("href")).offset().top
         }, 1000);
@@ -90,9 +98,13 @@ $(document).ready(function(){
     // __________Fancybox__________
     $('[data-fancybox="gallery"]').fancybox({
         loop: true,
-        toolbar: false,
+        buttons: [
+            "close"
+          ],
         animationEffect: "zoom-in-out",
         transitionEffect: "tube",
         transitionDuration: 600,
     });
+
+    new WOW().init();
 });
