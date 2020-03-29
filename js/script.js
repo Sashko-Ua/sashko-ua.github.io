@@ -20,6 +20,30 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 $(document).ready(function(){
+    // __________MOUSE-MOVE-BG__________
+    // $(document).ready(function() {           
+    //    $( document ).on( 'mousemove', function( e ) {
+    //         const amountMovedX = 60 * ( (e.pageX + 1) / $( document ).width() ) - 60;
+    //         const amountMovedY = 60 * ( (e.pageY + 1) / $( window ).height() ) - 100;
+
+    //         $( '#move-bg' ).css( 'background-position', amountMovedX + 'px ' + amountMovedY + 'px' );
+    //     });  
+    // });
+
+    // __________Typed.js__________
+    const typed = new Typed('#typed', {
+        strings: [
+            'My name is <strong>Sashko</strong>',
+            'I\'m Front-End Web<br>Developer',
+            'Love to learn<br>something <strong>NEW</strong>!'
+        ],
+        typeSpeed: 80,
+        backSpeed: 30,
+        smartBackspace: true,
+        loop: true
+    });
+
+    
     // __________OWL-CAROUSEL__________
 	$(".owl-carousel").owlCarousel({
 	items: 1,

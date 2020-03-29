@@ -16,10 +16,6 @@
         border: 5px double rgba(255,255,255, .8);
     }
     &__content {
-        h1 {
-            font-size: 40px;
-            color: #000;
-        }
         margin: 15px;
         padding: 45px 15px;
         width: 260px;
@@ -28,6 +24,21 @@
         color: rgba(0,0,0, .8);
         font-size: 16px;
         background: rgba(255,255,255, .8);
+        .typed {
+            margin-top: 45px;
+            font-size: 20px;
+            pre {
+                font-family: 'Kanit';
+                display: contents;
+                overflow: hidden;
+            }
+        }
+        h2 {
+            font-family: 'Caveat', cursive;
+            font-size: 55px;
+            color: #000;
+            margin: 0;
+        }
     }
 
     &__mouse {
@@ -74,4 +85,5 @@
             }    
         }
     }
+    
 }
