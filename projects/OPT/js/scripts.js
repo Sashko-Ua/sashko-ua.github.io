@@ -2,9 +2,9 @@ $(document).ready(function(){
 
 	// _________SLICK_________
 	$('.customers__carousel').slick({
-		prevArrow: '<button type="button" class="slick-prev"><img src="../icons/slider/arrow_left.png" alt=""></button>',
-		nextArrow: '<button type="button" class="slick-next"><img src="../icons/slider/arrow_right.png" alt=""></button>',
-		// autoplay: true,
+		prevArrow: '<button type="button" class="slick-prev"><img src="../../../projects/OPT/icons/slider/arrow_left.png" alt=""></button>',
+		nextArrow: '<button type="button" class="slick-next"><img src="../../../projects/OPT/icons/slider/arrow_right.png" alt=""></button>',
+		autoplay: true,
 		autoplaySpeed: 3000,
 		speed: 800,
 		variableWidth: true,
