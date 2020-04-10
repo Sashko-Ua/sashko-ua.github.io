@@ -4,7 +4,7 @@ $(document).ready(function(){
 	$('.customers__carousel').slick({
 		prevArrow: '<button type="button" class="slick-prev"><img src="../icons/slider/arrow_left.png" alt=""></button>',
 		nextArrow: '<button type="button" class="slick-next"><img src="../icons/slider/arrow_right.png" alt=""></button>',
-		// autoplay: true,
+		autoplay: true,
 		autoplaySpeed: 3000,
 		speed: 800,
 		variableWidth: true,
@@ -69,11 +69,57 @@ $(document).ready(function(){
 	});
 	
 	// __________MODAL__________
-	$('button').on('click', function() {
+	$('.modal-win').on('click', function() {1
 		$('.overlay, #call').fadeIn('fast');
 	});
 	$('.overlay__close').on('click', function(){
 		$('.overlay, #call').fadeOut('fast')
 	});
+
+	// __________VALIDATION__________
+	function valideForms(form){
+		$(form).validate({
+			rules: {
+				name: {
+					required: true,
+					minlength: 2
+				},
+				phone: {
+					required:true
+				},
+				email: {
+					required: true,
+					email: true
+				}
+			},
+			messages: {
+				name: "Це справді ваше ім'я?",
+				phone: "Це точно не номер телефону!",
+				email: {
+				  required: "Це не схоже на справжню пошту...",
+				  email: "Ось вірний формат пошти - exemple@domain.com"
+				}
+			}
+		});
+	};
+
+	valideForms('#consultation'),
+	valideForms('#forms form'),
+	valideForms('#call form')
+
+	// __________PHONE-MASK__________
+	$('input[name=phone]').mask("+38(099) 999-99-99");
+
+	// __________SEND-MASSAGE__________
+	$('form').submit(function(e) {
+		e.preventDefault();
+		// $.ajax().done(function(){
+			// $(this).find("input").val("")
+			$('#call').fadeOut();
+			
+			$('.overlay, #thanks').fadeIn("slow")
+			$('form').trigger('reset');
+		});
+	// 	return false;
+	// });
 });
-	
