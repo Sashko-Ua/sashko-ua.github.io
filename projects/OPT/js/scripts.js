@@ -47,9 +47,9 @@ $(document).ready(function(){
 			item.addEventListener('click', () => {
 				hamburger.classList.toggle('hamburger_active');
 				menu.classList.toggle('menu_active');
-			})
-		})
-	})
+			});
+		});
+	});
 
 	// __________Scroll__________
     $(window).scroll(function() {
@@ -69,11 +69,11 @@ $(document).ready(function(){
 	});
 	
 	// __________MODAL__________
-	$('.modal-win').on('click', function() {1
+	$('.modal-win').on('click', function() {
 		$('.overlay, #call').fadeIn('fast');
 	});
 	$('.overlay__close').on('click', function(){
-		$('.overlay, #call').fadeOut('fast')
+		$('.overlay, #call').fadeOut('fast');
 	});
 
 	// __________VALIDATION__________
@@ -101,25 +101,25 @@ $(document).ready(function(){
 				}
 			}
 		});
-	};
+	}
 
 	valideForms('#consultation'),
 	valideForms('#forms form'),
-	valideForms('#call form')
+	valideForms('#call form'),
 
 	// __________PHONE-MASK__________
 	$('input[name=phone]').mask("+38(099) 999-99-99");
 
 	// __________SEND-MASSAGE__________
-	$('form').submit(function(e) {
-		e.preventDefault();
-		// $.ajax().done(function(){
-			// $(this).find("input").val("")
-			$('#call').fadeOut();
+	// $('form').submit(function(e) {
+	// 	e.preventDefault();
+	// 	$.ajax().done(function(){
+	// 		$(this).find("input").val("");
+	// 		$('#call').fadeOut();
 			
-			$('.overlay, #thanks').fadeIn("slow")
-			$('form').trigger('reset');
-		});
+	// 		$('.overlay, #thanks').fadeIn("slow");
+	// 		$('form').trigger('reset');
+	// 	});
 	// 	return false;
 	// });
 });
