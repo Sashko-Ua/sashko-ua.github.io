@@ -13,9 +13,9 @@ window.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', () => {
             hamburger.classList.toggle('hamburger__active');
             menu.classList.toggle('menu__active');
-        })
-    })
-})
+        });
+    });
+});
 
 
 
@@ -60,12 +60,12 @@ $(document).ready(function(){
 				e.preventDefault();
 				$('.education__click').eq(i).toggleClass('education__click_active');
 				$('.education__certificate').eq(i).toggleClass('education__certificate_active');
-			})
+			});
 		});
-	};
+	}
 
-	toggleSlide('.next')
-    toggleSlide('.back')
+	toggleSlide('.next');
+    toggleSlide('.back');
 
 
     // __________Scroll__________
@@ -112,7 +112,7 @@ $(document).ready(function(){
                 }
             }
         });
-    };
+    }
 
     validateForms('#form');
 
@@ -130,5 +130,13 @@ $(document).ready(function(){
         transitionDuration: 600,
     });
 
-    new WOW().init();
+    wow = new WOW(
+        {
+        boxClass:     'wow',      // default
+        animateClass: 'animated', // default
+        offset:       0,          // default
+        mobile:       false,       // default
+        live:         true        // default
+    });
+    wow.init();
 });
