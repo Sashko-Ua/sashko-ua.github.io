@@ -1,3 +1,7 @@
+"use strict";
+
+$( document ).ready(function() {
+    
 // __________HAMBURGER__________
 window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu'),
@@ -70,7 +74,7 @@ $(document).ready(function(){
 
     // __________Scroll__________
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 1600) {
+        if ($(this).scrollTop() > 1200) {
             $('.arrow').fadeIn();
         } else {
             $('.arrow').fadeOut();
@@ -130,7 +134,7 @@ $(document).ready(function(){
         transitionDuration: 600,
     });
 
-    wow = new WOW(
+    const wow = new WOW(
         {
         boxClass:     'wow',      // default
         animateClass: 'animated', // default
@@ -139,4 +143,5 @@ $(document).ready(function(){
         live:         true        // default
     });
     wow.init();
+    });
 });
