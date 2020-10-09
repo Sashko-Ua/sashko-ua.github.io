@@ -1,90 +1,100 @@
-"use strict";
+'use strict';
 
-window.addEventListener('DOMContentLoaded', () => {
-    // __________SCROLLING ARROW__________
-    const arrowUP = document.querySelector('.arrow-up');
+// ----------Hamburger----------
 
-    arrowUP.addEventListener('click', () => {
-        window.scrollTo(pageYOffset, 1500);
-    })
+const hamburgerWrapper = document.querySelector('.hamburger__wrapper'),
+    menu = document.querySelector('.menu'),
+    close = document.querySelector('.close'),
+    overlay = document.querySelector('.menu__overlay'),
+    links = document.querySelectorAll('.menu__link'),
+    social = document.querySelector('.menu__social');
 
-    window.addEventListener('scroll', () => {
-        arrowUP.hidden = (pageYOffset < document.documentElement.clientHeight);
-    });
+hamburgerWrapper.addEventListener('click', () => {
+    menu.classList.add('menu_active');
+});
 
-    // __________SMOOTH SCROLLING__________
-    const anchors = document.querySelectorAll('a.scroll-to')
+close.addEventListener('click', () => {
+    menu.classList.remove('menu_active');
+});
 
-    SmoothScrolling(anchors);
+overlay.addEventListener('click', () => {
+    menu.classList.remove('menu_active');
+});
 
-    function SmoothScrolling(element) {
-        for (let anchor of element) {
-            anchor.addEventListener('click', (e) => {
-                e.preventDefault();
-
-                const blockID = anchor.getAttribute('href')
-
-                document.querySelector(blockID).scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            })
-        }
-    }
-
-    // __________HAMBURGER__________
-    const menu = document.querySelector('.menu'),
-        menuItem = document.querySelectorAll('.menu__item'),
-        hamburger = document.querySelector('.hamburger');
-
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('hamburger_active');
-        menu.classList.toggle('menu_active');
-    });
-
-    menuItem.forEach(item => {
-        item.addEventListener('click', () => {
-            hamburger.classList.toggle('hamburger_active');
-            menu.classList.toggle('menu_active');
-        })
-    })
-
-    // __________TYPED.JS__________
-    const typed = new Typed('#typed', {
-        strings: [
-            'My name is <strong>Sashko</strong>',
-            'I\'m Junior Front-End<br>Web Developer',
-            'Love to learn<br>something <strong>NEW</strong>!'
-        ],
-        typeSpeed: 80,
-        backSpeed: 30,
-        smartBackspace: true,
-        loop: true
-    });
-
-    // // __________POPUP__________
-    // $('.image-link').magnificPopup({
-    //     type: 'image',
-    //     gallery: {
-    //         enabled: true,
-    //     },
-    //     zoom: {
-    //         enabled: true,
-    //         duration: 400,
-    //         easing: 'ease-in-out',
-    //     },
-    //     closeBtnInside: false,
-    //     closeOnBgClick: false
-    // });
-
-    // __________Tab__________
-    const btn = document.querySelector('.tab__indicators'),
-        item = document.querySelectorAll('.tab__item'),
-        indicators = document.querySelectorAll('.tab__indicator');
-
-    btn.addEventListener('click', () => {
-        item.forEach(e => e.classList.toggle('tab__item_active'));
-
-        indicators.forEach(e => e.classList.toggle('tab__indicator_active'));
+links.forEach(e => {
+    e.addEventListener('click', () => {
+        menu.classList.remove('menu_active');
     });
 });
+
+social.addEventListener('click', () => {
+    menu.classList.remove('menu_active');
+});
+
+// ----------ChangeColorForHamburger+Sidepanel----------
+
+const hamburger = document.querySelector('.hamburger'),
+    hamburgerSpans = document.querySelectorAll('.hamburger span'),
+    sidepanelLink = document.querySelectorAll('.sidepanel__link'),
+    divider = document.querySelector('.sidepanel__divider'),
+    sidepanelText = document.querySelector('.sidepanel__text');
+
+window.addEventListener('scroll', () => {
+    (pageYOffset > document.documentElement.clientHeight * .2) ? sidepanelText.style.color = '#000': sidepanelText.style.color = '#fff';
+
+    (pageYOffset > document.documentElement.clientHeight * .5) ? divider.classList.add('blackBG'): divider.classList.remove('blackBG');
+
+    if (pageYOffset > document.documentElement.clientHeight * .6) {
+        sidepanelLink.forEach(element => {
+            element.classList.add('blackColor');
+        });
+    } else {
+        sidepanelLink.forEach(element => {
+            element.classList.remove('blackColor');
+        });
+    }
+
+    if (pageYOffset > document.documentElement.clientHeight) {
+        hamburgerSpans.forEach(element => {
+            element.classList.add('black');
+        });
+
+        hamburger.classList.add('hamburger_blackBG');
+    } else {
+        hamburgerSpans.forEach(element => {
+            element.classList.remove('black');
+        });
+
+        hamburger.classList.remove('hamburger_blackBG');
+    }
+});
+
+// ----------SkillsAutoPercent----------
+
+const counters = document.querySelectorAll('.skills__percent-box-value'),
+    lines = document.querySelectorAll('.skills__percent-progress-value');
+
+counters.forEach((item, i) => {
+    lines[i].style.width = item.innerHTML;
+});
+
+// ----------Smooth Scrolling----------
+const anchors = document.querySelectorAll('a[href^="#"]');
+
+
+SmoothScrolling(anchors);
+
+function SmoothScrolling(element) {
+    for (let anchor of element) {
+        anchor.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const blockID = anchor.getAttribute('href')
+
+            document.querySelector(blockID).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        })
+    }
+}
